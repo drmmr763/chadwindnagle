@@ -1,1 +1,1 @@
-# cohesive template for cohesivewebsites.com
+# custom template for chad windangle
