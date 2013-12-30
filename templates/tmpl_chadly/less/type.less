@@ -2,6 +2,37 @@
 // Typography
 // --------------------------------------------------
 
+// allen font
+@font-face {
+  font-family: allen;
+  src: url('../fonts/Allan-Regular.ttf');
+}
+
+@font-face {
+  font-family: allen;
+  src: url('../fonts/Allan-Bold.ttf');
+  font-weight: bold;
+}
+
+// old standard
+
+@font-face {
+  font-family: oldstandard;
+  src: url('../fonts/OldStandard-Regular.ttf');
+}
+
+@font-face {
+  font-family: oldstandard;
+  src: url('../fonts/OldStandard-Bold.ttf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: oldstandard;
+  src: url('../fonts/OldStandard-Italic.ttf');
+  font-style: italic;
+}
+
 
 // Body text
 // -------------------------
@@ -247,12 +278,31 @@ address {
 }
 
 .accent {
-  font-family: allen;
+  font-family: oldstandard, @serifFontFamily;
+}
+
+i {
+  .accent;
+  font-weight: bold;
 }
 
 // custom styles for different site sections
 header {
-
+  h1 {
+    font-size: 5em;
+    line-height: 1.5em;
+    .accent;
+    font-style: italic;
+    font-weight: bold;
+  }
+  a {
+    color: @white;
+    opacity: .8;
+    &:hover {
+      opacity: 1;
+      color: @white;
+    }
+  }
 }
 
 .main-banner {
@@ -260,6 +310,10 @@ header {
     line-height: 2.5em;
     font-size: 4.5em;
   }
+}
+
+.navigation {
+  font-size: 1.6em;
 }
 
 footer {

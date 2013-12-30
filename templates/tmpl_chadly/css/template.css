@@ -49,16 +49,12 @@ sub {
 }
 img {
   /* Responsive images (ensure images don't scale beyond their parents) */
-
   max-width: 100%;
   /* Part 1: Set a maxium relative to the parent */
-
   width: auto\9;
   /* IE7-8 need help adjusting responsive images */
-
   height: auto;
   /* Part 2: Scale the height according to the width, otherwise you get stretching */
-
   vertical-align: middle;
   border: 0;
   -ms-interpolation-mode: bicubic;
@@ -153,7 +149,7 @@ textarea {
   img {
     max-width: 100% !important;
   }
-  @page  {
+  @page {
     margin: 0.5cm;
   }
   p,
@@ -166,15 +162,6 @@ textarea {
   h3 {
     page-break-after: avoid;
   }
-}
-@font-face {
-  font-family: allen;
-  src: url('../fonts/Allan-Regular.ttf');
-}
-@font-face {
-  font-family: allen;
-  src: url('../fonts/Allan-Bold.ttf');
-  font-weight: bold;
 }
 .clearfix {
   *zoom: 1;
@@ -719,7 +706,6 @@ input[type="color"]:focus,
   outline: 0;
   outline: thin dotted \9;
   /* IE6-9 */
-
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
   -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
@@ -729,10 +715,8 @@ input[type="checkbox"] {
   margin: 4px 0 0;
   *margin-top: 0;
   /* IE7 */
-
   margin-top: 1px \9;
   /* IE8-9 */
-
   line-height: normal;
 }
 input[type="file"],
@@ -748,10 +732,8 @@ select,
 input[type="file"] {
   height: 28px;
   /* In IE7, the height of the select element cannot be changed by height, only font-size */
-
   *margin-top: 4px;
   /* For IE7, add top margin to align select with labels */
-
   line-height: 28px;
 }
 select {
@@ -1149,7 +1131,6 @@ select:focus:invalid:focus {
   display: inline-block;
   *display: inline;
   /* IE7 inline-block hack */
-
   *zoom: 1;
   vertical-align: middle;
   padding-left: 5px;
@@ -1300,7 +1281,6 @@ input.search-query {
   padding-left: 14px;
   padding-left: 4px \9;
   /* IE7-8 doesn't have border-radius, so don't indent the padding */
-
   margin-bottom: 0;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
@@ -1357,7 +1337,6 @@ input.search-query {
   display: inline-block;
   *display: inline;
   /* IE7 inline-block hack */
-
   *zoom: 1;
   margin-bottom: 0;
   vertical-align: middle;
@@ -1967,7 +1946,6 @@ button.close {
   display: inline-block;
   *display: inline;
   /* IE7 inline-block hack */
-
   *zoom: 1;
   padding: 4px 12px;
   margin-bottom: 0;
@@ -1989,7 +1967,6 @@ button.close {
   border-color: #e6e6e6 #e6e6e6 #bfbfbf;
   *background-color: #e6e6e6;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   border: 1px solid #bbbbbb;
   *border: 0;
@@ -2124,7 +2101,6 @@ input[type="button"].btn-block {
   border-color: #0044cc #0044cc #002a80;
   *background-color: #0044cc;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 .btn-primary:hover,
@@ -2155,7 +2131,6 @@ input[type="button"].btn-block {
   border-color: #f89406 #f89406 #ad6704;
   *background-color: #f89406;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 .btn-warning:hover,
@@ -2186,7 +2161,6 @@ input[type="button"].btn-block {
   border-color: #bd362f #bd362f #802420;
   *background-color: #bd362f;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 .btn-danger:hover,
@@ -2217,7 +2191,6 @@ input[type="button"].btn-block {
   border-color: #51a351 #51a351 #387038;
   *background-color: #51a351;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 .btn-success:hover,
@@ -2248,7 +2221,6 @@ input[type="button"].btn-block {
   border-color: #2f96b4 #2f96b4 #1f6377;
   *background-color: #2f96b4;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 .btn-info:hover,
@@ -2279,7 +2251,6 @@ input[type="button"].btn-block {
   border-color: #222222 #222222 #000000;
   *background-color: #222222;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 .btn-inverse:hover,
@@ -2354,7 +2325,6 @@ input[type="submit"].btn.btn-mini {
   display: inline-block;
   *display: inline;
   /* IE7 inline-block hack */
-
   *zoom: 1;
   font-size: 0;
   vertical-align: middle;
@@ -2530,7 +2500,6 @@ input[type="submit"].btn.btn-mini {
   display: inline-block;
   *display: inline;
   /* IE7 inline-block hack */
-
   *zoom: 1;
 }
 .btn-group-vertical > .btn {
@@ -3183,7 +3152,7 @@ input[type="submit"].btn.btn-mini {
 }
 .navbar .nav > li > a {
   float: none;
-  padding: 11px 15px 11px;
+  padding: 20px 40px;
   color: #555555;
   text-decoration: none;
   text-shadow: 0 1px 0 #ffffff;
@@ -3226,7 +3195,6 @@ input[type="submit"].btn.btn-mini {
   border-color: #e5e5e5 #e5e5e5 #bfbfbf;
   *background-color: #e5e5e5;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075);
   -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075);
@@ -3459,7 +3427,6 @@ input[type="submit"].btn.btn-mini {
   border-color: #040404 #040404 #000000;
   *background-color: #040404;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 .navbar-inverse .btn-navbar:hover,
@@ -3489,7 +3456,6 @@ input[type="submit"].btn.btn-mini {
   display: inline-block;
   *display: inline;
   /* IE7 inline-block hack */
-
   *zoom: 1;
   text-shadow: 0 1px 0 #ffffff;
 }
@@ -3507,7 +3473,6 @@ input[type="submit"].btn.btn-mini {
   display: inline-block;
   *display: inline;
   /* IE7 inline-block hack */
-
   *zoom: 1;
   margin-left: 0;
   margin-bottom: 0;
@@ -5980,7 +5945,6 @@ div.modal {
   border: 1px solid rgba(0, 0, 0, 0.3);
   *border: 1px solid #999;
   /* IE6-7 */
-
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
@@ -6791,18 +6755,21 @@ header {
   z-index: 1030;
   margin-bottom: 0;
   top: 0;
+  background-color: #002a3d;
 }
 header .logo {
   float: left;
   margin-left: 20px;
-  width: 220px;
+  width: 620px;
   margin-left: 0px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
 }
-header nav {
-  margin-top: 10px;
+header .header {
   float: left;
-  margin-left: 20px;
-  width: 700px;
+  padding-right: 20px;
 }
 header .navbar-inner {
   -webkit-box-shadow: 0 1px 10px rgba(0,0,0,.1);
@@ -6811,6 +6778,30 @@ header .navbar-inner {
 }
 .header-offset {
   margin-top: 68px;
+}
+.main-banner {
+  background: url('../images/chad-jday-milwaukee.jpg') no-repeat;
+  background-attachment: fixed;
+  border-bottom: 2px solid #555555;
+  position: relative;
+  min-height: 600px;
+  background-size: cover;
+  margin-top: 115px;
+}
+.main-banner .intro-background {
+  margin-top: 30px;
+  float: left;
+  margin-left: 20px;
+  width: 300px;
+  background-color: #eeeeee;
+  opacity: .8;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.main-banner .intro-background .intro {
+  padding: 20px;
+  opacity: 1;
 }
 main {
   min-height: 700px;
@@ -6832,16 +6823,46 @@ aside {
   width: 220px;
   margin-left: 0px;
 }
-.main-banner {
-  height: 170px;
-  background: url('../images/main-banner.jpg') no-repeat;
-  background-attachment: fixed;
-  border-bottom: 2px solid #555555;
-  position: relative;
-  background-position: 0px -190px;
+#about {
+  background-color: #6e91ac;
+}
+#about #smyrna {
+  height: 400px;
+}
+#about,
+#speaking,
+#contact {
+  height: 500px;
+}
+.navigation {
+  width: 100%;
+  background-color: #046fc3;
 }
 footer {
   height: 300px;
+}
+@font-face {
+  font-family: allen;
+  src: url('../fonts/Allan-Regular.ttf');
+}
+@font-face {
+  font-family: allen;
+  src: url('../fonts/Allan-Bold.ttf');
+  font-weight: bold;
+}
+@font-face {
+  font-family: oldstandard;
+  src: url('../fonts/OldStandard-Regular.ttf');
+}
+@font-face {
+  font-family: oldstandard;
+  src: url('../fonts/OldStandard-Bold.ttf');
+  font-weight: bold;
+}
+@font-face {
+  font-family: oldstandard;
+  src: url('../fonts/OldStandard-Italic.ttf');
+  font-style: italic;
 }
 p {
   margin: 0 0 9px;
@@ -7000,7 +7021,6 @@ ol.inline > li {
   display: inline-block;
   *display: inline;
   /* IE7 inline-block hack */
-
   *zoom: 1;
   padding-left: 5px;
   padding-right: 5px;
@@ -7106,9 +7126,31 @@ address {
   line-height: 18px;
 }
 .accent {
-  font-family: allen;
+  font-family: oldstandard, Georgia, "Times New Roman", Times, serif;
+}
+i {
+  font-family: oldstandard, Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
+}
+header h1 {
+  font-size: 5em;
+  line-height: 1.5em;
+  font-family: oldstandard, Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+  font-weight: bold;
+}
+header a {
+  color: #ffffff;
+  opacity: .8;
+}
+header a:hover {
+  opacity: 1;
+  color: #ffffff;
 }
 .main-banner h1 {
   line-height: 2.5em;
   font-size: 4.5em;
+}
+.navigation {
+  font-size: 1.6em;
 }

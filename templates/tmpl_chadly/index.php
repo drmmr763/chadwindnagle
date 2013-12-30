@@ -17,7 +17,7 @@ JHtml::_('bootstrap.framework');
 
 // Add Stylesheets
 $this->addStyleSheet('templates/'.$this->template.'/css/template.css');
-//$this->addScript('templates/'.$this->template.'/js/jquery.sticky.js');
+$this->addScript('templates/'.$this->template.'/js/jquery.sticky.js');
 
 ?>
 <!DOCTYPE html>
@@ -30,15 +30,31 @@ $this->addStyleSheet('templates/'.$this->template.'/css/template.css');
 	<![endif]-->
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".navbar">
     <header>
         <section class="container">
             <div class="logo">
-                <h1><a href="<?php echo JUri::root(); ?>">
-                        <img src="<?php echo JUri::root(); ?>/templates/<?php echo $this->template; ?>/images/logo.png" />
-                    </a>
+                <img class="header" src="<?php echo JUri::root(); ?>/templates/<?php echo $this->template; ?>/images/chad_cartoon.png" />
+                <h1>
+                    <a href="<?php echo JUri::root(); ?>">Chad Windnagle</a>
                 </h1>
             </div>
+        </section>
+    </header>
+    <section class="main-banner">
+        <div class="container">
+            <div class="intro-background">
+                <div class="intro">
+                    <h3>I'm Chad Windnagle. I'm a web expert specializing in building
+                     <i> joomla websites</i>
+                     that are <i>responsive</i>, high quality
+                     in design, <i>accessible</i>, and <i>user-friendly</i>.
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="navigation">
+        <div class="container">
             <nav class="navbar">
                 <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                     <span class="icon-bar"></span>
@@ -49,15 +65,9 @@ $this->addStyleSheet('templates/'.$this->template.'/css/template.css');
                     <jdoc:include type="modules" name="top-menu" style="none" />
                 </div>
             </nav>
-        </section>
-    </header>
-    <div class="header-offset"></div>
-    <div class="main-banner">
-        <div class="container">
-            <jdoc:include type="modules" name="main-banner" style="none" />
         </div>
-    </div>
-    <main data-stellar-ratio="2">
+    </section>
+    <main>
         <section class="container">
             <?php if($this->countModules('sidebar')):?>
                 <aside>
@@ -71,7 +81,23 @@ $this->addStyleSheet('templates/'.$this->template.'/css/template.css');
                 <jdoc:include type="modules" name="below-content" />
             </div>
         </section>
-    </main >
+    </main>
+    <section id="about">
+        <div class="container">
+            <article class="span4">
+                <h3>In June of 2013 I moved from Upstate New York to a little beach town in Florida called New Smyrna Beach. I spend my days building great websites, working with a talented team and contributing to the Joomla project.</h3>
+            </article>
+            <article>
+                <div id="smyrna"></div>
+            </article>
+        </div>
+    </section>
+    <div id="speaking">
+        <p>speaking</p>
+    </div>
+    <div id="contact">
+        <p>contact</p>
+    </div>
 	<!-- Footer -->
 	<footer>
         <section class="container">
@@ -81,6 +107,10 @@ $this->addStyleSheet('templates/'.$this->template.'/css/template.css');
         </section>
 	    <jdoc:include type="modules" name="debug" style="none" />
     </footer>
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2xtIA8Ev1UCOtI6TmVlYPWGcjIv63ns4&sensor=true">
+    </script>
+
     <script type="text/javascript">
         jQuery(document).ready(function()
         {
@@ -96,7 +126,17 @@ $this->addStyleSheet('templates/'.$this->template.'/css/template.css');
                 verticalOffset: 0
             });
             */
+            jQuery(".navigation").sticky({topSpacing:115});
         });
+        function initialize() {
+            var mapOptions = {
+                center: new google.maps.LatLng(29.025819, -80.926998),
+                zoom: 8
+            };
+            var map = new google.maps.Map(document.getElementById("smyrna"),
+                mapOptions);
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
     </script>
 </body>
 
